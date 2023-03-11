@@ -17,8 +17,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  color: #212121;
-  background-color: #fff;
+  color: #000000;
+  background-color: #a7d5d1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -35,51 +35,58 @@ li {
 
 .App {
   display: grid;
-
   grid-template-columns: 1fr;
   grid-gap: 16px;
   padding-bottom: 24px;
 }
 
+.message {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(176, 58, 58);
+  margin-top: 20px;
+}
+
 /* loader */
-.lds-grid {
+.spin {
   display: inline-block;
   position: fixed;
   top: 50%;
-  right: 50%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
   width: 80px;
   height: 80px;
 }
 
-.lds-grid div {
+.spin div {
   position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #b64acc;
-  animation: lds-grid 1.2s linear infinite;
+  width: 20px;
+  height: 20px;
+  background: #106813;
+  animation: spin 1.2s linear infinite;
 }
 
-.lds-grid div:nth-child(1) {
+.spin div:nth-child(1) {
   top: 8px;
   left: 8px;
   animation-delay: 0s;
 }
 
-.lds-grid div:nth-child(2) {
+.spin div:nth-child(2) {
   top: 8px;
   left: 32px;
   animation-delay: -0.4s;
 }
 
-.lds-grid div:nth-child(3) {
+.spin div:nth-child(3) {
   top: 8px;
   left: 56px;
   animation-delay: -0.8s;
 }
 
-@keyframes lds-grid {
+@keyframes spin {
 
   0%,
   100% {
